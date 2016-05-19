@@ -1,0 +1,726 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.app.color-preset-1 .page-banner {
+    background-color: #941c2f;
+}
+.app.color-preset-1 .color-presets.open .preset-toggle {
+    color: #941c2f;
+}
+.app.color-preset-1 .color-presets:not(.open) .preset-toggle:hover {
+    color: #941c2f;
+}
+.app.color-preset-1 .help-popout.open .help-toggle {
+    color: #941c2f;
+}
+.app.color-preset-1 .help-popout:not(.open) .help-toggle:hover {
+    color: #941c2f;
+}
+.app.color-preset-1 .help-popout .help-items {
+    background-color: #f6d2d8;
+    border-color: #941c2f;
+}
+.app.color-preset-1 .help-popout .help-items .help-item span {
+    color: #941c2f;
+}
+.app.color-preset-1 .help-popout .help-items .help-item .help-item-number {
+    background-color: #941c2f;
+    color: #f6d2d8;
+}
+.app.color-preset-1 .expando-table .expando-header {
+    border-color: #941c2f;
+}
+.app.color-preset-1 .expando-table .header-cell {
+    background-color: #941c2f;
+}
+.app.color-preset-1 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #f6d2d8;
+}
+.app.color-preset-1 .expando-table .expando-view .expando-row,
+.app.color-preset-1 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #de5168;
+}
+.app.color-preset-1 .expando-table .expando-view .close-view,
+.app.color-preset-1 .expando-table .expando-view .close-edit,
+.app.color-preset-1 .expando-table .expando-view .open-view,
+.app.color-preset-1 .expando-table .expando-view .open-edit,
+.app.color-preset-1 .expando-table .expando-edit .close-view,
+.app.color-preset-1 .expando-table .expando-edit .close-edit,
+.app.color-preset-1 .expando-table .expando-edit .open-view,
+.app.color-preset-1 .expando-table .expando-edit .open-edit {
+    border-color: #941c2f;
+}
+.app.color-preset-1 .expando-table .expando-view .close-view:hover,
+.app.color-preset-1 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-1 .expando-table .expando-view .open-view:hover,
+.app.color-preset-1 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-1 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-1 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-1 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-1 .expando-table .expando-edit .open-edit:hover {
+    color: #bf243d;
+}
+.app.color-preset-2 .page-banner {
+    background-color: #2b4162;
+}
+.app.color-preset-2 .color-presets.open .preset-toggle {
+    color: #2b4162;
+}
+.app.color-preset-2 .color-presets:not(.open) .preset-toggle:hover {
+    color: #2b4162;
+}
+.app.color-preset-2 .help-popout.open .help-toggle {
+    color: #2b4162;
+}
+.app.color-preset-2 .help-popout:not(.open) .help-toggle:hover {
+    color: #2b4162;
+}
+.app.color-preset-2 .help-popout .help-items {
+    background-color: #c1cfe4;
+    border-color: #2b4162;
+}
+.app.color-preset-2 .help-popout .help-items .help-item span {
+    color: #2b4162;
+}
+.app.color-preset-2 .help-popout .help-items .help-item .help-item-number {
+    background-color: #2b4162;
+    color: #c1cfe4;
+}
+.app.color-preset-2 .expando-table .expando-header {
+    border-color: #2b4162;
+}
+.app.color-preset-2 .expando-table .header-cell {
+    background-color: #2b4162;
+}
+.app.color-preset-2 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #c1cfe4;
+}
+.app.color-preset-2 .expando-table .expando-view .expando-row,
+.app.color-preset-2 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #577db5;
+}
+.app.color-preset-2 .expando-table .expando-view .close-view,
+.app.color-preset-2 .expando-table .expando-view .close-edit,
+.app.color-preset-2 .expando-table .expando-view .open-view,
+.app.color-preset-2 .expando-table .expando-view .open-edit,
+.app.color-preset-2 .expando-table .expando-edit .close-view,
+.app.color-preset-2 .expando-table .expando-edit .close-edit,
+.app.color-preset-2 .expando-table .expando-edit .open-view,
+.app.color-preset-2 .expando-table .expando-edit .open-edit {
+    border-color: #2b4162;
+}
+.app.color-preset-2 .expando-table .expando-view .close-view:hover,
+.app.color-preset-2 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-2 .expando-table .expando-view .open-view:hover,
+.app.color-preset-2 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-2 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-2 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-2 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-2 .expando-table .expando-edit .open-edit:hover {
+    color: #3b5985;
+}
+.app.color-preset-3 .page-banner {
+    background-color: #00b563;
+}
+.app.color-preset-3 .color-presets.open .preset-toggle {
+    color: #00b563;
+}
+.app.color-preset-3 .color-presets:not(.open) .preset-toggle:hover {
+    color: #00b563;
+}
+.app.color-preset-3 .help-popout.open .help-toggle {
+    color: #00b563;
+}
+.app.color-preset-3 .help-popout:not(.open) .help-toggle:hover {
+    color: #00b563;
+}
+.app.color-preset-3 .help-popout .help-items {
+    background-color: #cfffe9;
+    border-color: #00b563;
+}
+.app.color-preset-3 .help-popout .help-items .help-item span {
+    color: #00b563;
+}
+.app.color-preset-3 .help-popout .help-items .help-item .help-item-number {
+    background-color: #00b563;
+    color: #cfffe9;
+}
+.app.color-preset-3 .expando-table .expando-header {
+    border-color: #00b563;
+}
+.app.color-preset-3 .expando-table .header-cell {
+    background-color: #00b563;
+}
+.app.color-preset-3 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #cfffe9;
+}
+.app.color-preset-3 .expando-table .expando-view .expando-row,
+.app.color-preset-3 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #36ffa4;
+}
+.app.color-preset-3 .expando-table .expando-view .close-view,
+.app.color-preset-3 .expando-table .expando-view .close-edit,
+.app.color-preset-3 .expando-table .expando-view .open-view,
+.app.color-preset-3 .expando-table .expando-view .open-edit,
+.app.color-preset-3 .expando-table .expando-edit .close-view,
+.app.color-preset-3 .expando-table .expando-edit .close-edit,
+.app.color-preset-3 .expando-table .expando-edit .open-view,
+.app.color-preset-3 .expando-table .expando-edit .open-edit {
+    border-color: #00b563;
+}
+.app.color-preset-3 .expando-table .expando-view .close-view:hover,
+.app.color-preset-3 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-3 .expando-table .expando-view .open-view:hover,
+.app.color-preset-3 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-3 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-3 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-3 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-3 .expando-table .expando-edit .open-edit:hover {
+    color: #00e87f;
+}
+.app.color-preset-4 .page-banner {
+    background-color: #d63300;
+}
+.app.color-preset-4 .color-presets.open .preset-toggle {
+    color: #d63300;
+}
+.app.color-preset-4 .color-presets:not(.open) .preset-toggle:hover {
+    color: #d63300;
+}
+.app.color-preset-4 .help-popout.open .help-toggle {
+    color: #d63300;
+}
+.app.color-preset-4 .help-popout:not(.open) .help-toggle:hover {
+    color: #d63300;
+}
+.app.color-preset-4 .help-popout .help-items {
+    background-color: #ffe0d6;
+    border-color: #d63300;
+}
+.app.color-preset-4 .help-popout .help-items .help-item span {
+    color: #d63300;
+}
+.app.color-preset-4 .help-popout .help-items .help-item .help-item-number {
+    background-color: #d63300;
+    color: #ffe0d6;
+}
+.app.color-preset-4 .expando-table .expando-header {
+    border-color: #d63300;
+}
+.app.color-preset-4 .expando-table .header-cell {
+    background-color: #d63300;
+}
+.app.color-preset-4 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #ffe0d6;
+}
+.app.color-preset-4 .expando-table .expando-view .expando-row,
+.app.color-preset-4 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #ff7f57;
+}
+.app.color-preset-4 .expando-table .expando-view .close-view,
+.app.color-preset-4 .expando-table .expando-view .close-edit,
+.app.color-preset-4 .expando-table .expando-view .open-view,
+.app.color-preset-4 .expando-table .expando-view .open-edit,
+.app.color-preset-4 .expando-table .expando-edit .close-view,
+.app.color-preset-4 .expando-table .expando-edit .close-edit,
+.app.color-preset-4 .expando-table .expando-edit .open-view,
+.app.color-preset-4 .expando-table .expando-edit .open-edit {
+    border-color: #d63300;
+}
+.app.color-preset-4 .expando-table .expando-view .close-view:hover,
+.app.color-preset-4 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-4 .expando-table .expando-view .open-view:hover,
+.app.color-preset-4 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-4 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-4 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-4 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-4 .expando-table .expando-edit .open-edit:hover {
+    color: #ff440a;
+}
+.app.color-preset-5 .page-banner {
+    background-color: #e31044;
+}
+.app.color-preset-5 .color-presets.open .preset-toggle {
+    color: #e31044;
+}
+.app.color-preset-5 .color-presets:not(.open) .preset-toggle:hover {
+    color: #e31044;
+}
+.app.color-preset-5 .help-popout.open .help-toggle {
+    color: #e31044;
+}
+.app.color-preset-5 .help-popout:not(.open) .help-toggle:hover {
+    color: #e31044;
+}
+.app.color-preset-5 .help-popout .help-items {
+    background-color: #fddce4;
+    border-color: #e31044;
+}
+.app.color-preset-5 .help-popout .help-items .help-item span {
+    color: #e31044;
+}
+.app.color-preset-5 .help-popout .help-items .help-item .help-item-number {
+    background-color: #e31044;
+    color: #fddce4;
+}
+.app.color-preset-5 .expando-table .expando-header {
+    border-color: #e31044;
+}
+.app.color-preset-5 .expando-table .header-cell {
+    background-color: #e31044;
+}
+.app.color-preset-5 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #fddce4;
+}
+.app.color-preset-5 .expando-table .expando-view .expando-row,
+.app.color-preset-5 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #f67d9b;
+}
+.app.color-preset-5 .expando-table .expando-view .close-view,
+.app.color-preset-5 .expando-table .expando-view .close-edit,
+.app.color-preset-5 .expando-table .expando-view .open-view,
+.app.color-preset-5 .expando-table .expando-view .open-edit,
+.app.color-preset-5 .expando-table .expando-edit .close-view,
+.app.color-preset-5 .expando-table .expando-edit .close-edit,
+.app.color-preset-5 .expando-table .expando-edit .open-view,
+.app.color-preset-5 .expando-table .expando-edit .open-edit {
+    border-color: #e31044;
+}
+.app.color-preset-5 .expando-table .expando-view .close-view:hover,
+.app.color-preset-5 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-5 .expando-table .expando-view .open-view:hover,
+.app.color-preset-5 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-5 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-5 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-5 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-5 .expando-table .expando-edit .open-edit:hover {
+    color: #f13563;
+}
+.app.color-preset-6 .page-banner {
+    background-color: #2b303a;
+}
+.app.color-preset-6 .color-presets.open .preset-toggle {
+    color: #2b303a;
+}
+.app.color-preset-6 .color-presets:not(.open) .preset-toggle:hover {
+    color: #2b303a;
+}
+.app.color-preset-6 .help-popout.open .help-toggle {
+    color: #2b303a;
+}
+.app.color-preset-6 .help-popout:not(.open) .help-toggle:hover {
+    color: #2b303a;
+}
+.app.color-preset-6 .help-popout .help-items {
+    background-color: #e1e4e9;
+    border-color: #2b303a;
+}
+.app.color-preset-6 .help-popout .help-items .help-item span {
+    color: #2b303a;
+}
+.app.color-preset-6 .help-popout .help-items .help-item .help-item-number {
+    background-color: #2b303a;
+    color: #e1e4e9;
+}
+.app.color-preset-6 .expando-table .expando-header {
+    border-color: #2b303a;
+}
+.app.color-preset-6 .expando-table .header-cell {
+    background-color: #2b303a;
+}
+.app.color-preset-6 .expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: #e1e4e9;
+}
+.app.color-preset-6 .expando-table .expando-view .expando-row,
+.app.color-preset-6 .expando-table .expando-edit .expando-row {
+    border-bottom-color: #616d83;
+}
+.app.color-preset-6 .expando-table .expando-view .close-view,
+.app.color-preset-6 .expando-table .expando-view .close-edit,
+.app.color-preset-6 .expando-table .expando-view .open-view,
+.app.color-preset-6 .expando-table .expando-view .open-edit,
+.app.color-preset-6 .expando-table .expando-edit .close-view,
+.app.color-preset-6 .expando-table .expando-edit .close-edit,
+.app.color-preset-6 .expando-table .expando-edit .open-view,
+.app.color-preset-6 .expando-table .expando-edit .open-edit {
+    border-color: #2b303a;
+}
+.app.color-preset-6 .expando-table .expando-view .close-view:hover,
+.app.color-preset-6 .expando-table .expando-view .close-edit:hover,
+.app.color-preset-6 .expando-table .expando-view .open-view:hover,
+.app.color-preset-6 .expando-table .expando-view .open-edit:hover,
+.app.color-preset-6 .expando-table .expando-edit .close-view:hover,
+.app.color-preset-6 .expando-table .expando-edit .close-edit:hover,
+.app.color-preset-6 .expando-table .expando-edit .open-view:hover,
+.app.color-preset-6 .expando-table .expando-edit .open-edit:hover {
+    color: #414857;
+}
+.page-banner {
+    padding-top: 1em;
+    text-align: center;
+    color: white;
+}
+.page-banner.sub {
+    padding: 0.5em;
+    font-size: 0.7em;
+}
+.table-container {
+    position: relative;
+    padding: 3em 5vw 5vh 5vw;
+    background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/hoffman.png);
+}
+.color-presets {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    font-size: 1.6em;
+}
+.color-presets.open .color-preset {
+    visibility: visible;
+}
+.color-presets.open .preset-toggle::before,
+.color-presets.open .preset-toggle::after {
+    display: none;
+}
+.color-presets .color-preset {
+    visibility: hidden;
+    padding: 0.3em 0.1em;
+    transition: transform 0.1s linear;
+    cursor: pointer;
+}
+.color-presets .color-preset .color-box {
+    height: 1em;
+    width: 1em;
+}
+.color-presets .color-preset .color-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.6);
+}
+.color-presets .preset-toggle {
+    padding: 0.1em;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.help-popout {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    font-size: 1.6em;
+}
+.help-popout.open .help-items {
+    display: block;
+    width: 500px;
+    height: auto;
+}
+.help-popout.open .help-toggle::before,
+.help-popout.open .help-toggle::after {
+    display: none;
+}
+.help-popout .help-items {
+    position: absolute;
+    display: none;
+    z-index: 20;
+    width: 0;
+    height: 0;
+    top: 3.4em;
+    right: 1.3em;
+    font-size: 0.5em;
+    background-color: white;
+    border: 0.1em solid black;
+    box-shadow: -0.2em 0.3em 0.5em rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+.help-popout .help-item {
+    cursor: default;
+}
+.help-popout .help-item:hover {
+    background-color: ghostwhite;
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.6);
+}
+.help-popout .help-item .help-item-number {
+    display: inline-block;
+    padding: 1em 0 1em 0.5em;
+    margin-right: 0.2em;
+    width: 1.7em;
+    background-color: #941c2f;
+    color: #f6d2d8;
+}
+.help-popout .help-item .help-box {
+    display: inline-block;
+    padding: 1em;
+}
+.help-popout .help-item .help-box span {
+    font-weight: bold;
+}
+.help-popout .help-toggle {
+    padding: 0.1em;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+.expando-table {
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 82.5vh;
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.8);
+}
+.expando-table .expando-header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    z-index: 5;
+    background-color: white;
+    width: 90vw;
+    padding: 0.2em;
+    text-align: center;
+    border-bottom: 0.1em solid black;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.8);
+}
+.expando-table .expando-header .header-cell {
+    flex-grow: 1;
+    margin: 0.2em;
+    padding: 0.2em;
+    font-size: 0.9em;
+    color: white;
+    text-transform: uppercase;
+}
+.expando-table .expando-rows {
+    padding-top: 3em;
+    font-size: 0.8em;
+    color: #161925;
+}
+.expando-table .expando-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: center;
+    transition: transform 0.1s linear;
+    cursor: pointer;
+    border-bottom: 0.2em solid black;
+    background-color: white;
+    padding: 0.1em 0 0.1em 0;
+}
+.expando-table .expando-row:not(.no-scale):nth-of-type(odd) {
+    background-color: white;
+}
+.expando-table .expando-row:not(.showUI):hover .click-indicator {
+    left: 3em;
+}
+.expando-table .expando-row:hover:not(.no-scale),
+.expando-table .expando-row.showUI:not(.no-scale) {
+    transform: scale(1.05);
+    padding: 0 1.5em 0 1.5em;
+}
+.expando-table .expando-row:hover .data-cell,
+.expando-table .expando-row.showUI .data-cell {
+    padding-top: 0.5em;
+}
+.expando-table .expando-row:hover .data-cell:nth-of-type(3),
+.expando-table .expando-row.showUI .data-cell:nth-of-type(3) {
+    padding-bottom: 0.5em;
+}
+.expando-table .expando-row.showUI .popout-ui {
+    position: relative;
+    left: 0;
+}
+.expando-table .expando-row .click-indicator {
+    position: absolute;
+    z-index: 3;
+    left: -5em;
+    top: 0.45em;
+    opacity: 0.2;
+    transition: left 0.1s linear;
+}
+.expando-table .expando-row .data-cell {
+    flex-grow: 1;
+    transition: all 0.1s linear;
+}
+.expando-table .expando-row .popout-ui {
+    position: absolute;
+    transition: all 0.1s linear;
+    width: 150px;
+    top: -0.1em;
+    left: -150px;
+}
+.expando-table .expando-row .popout-ui .row-actions {
+    font-size: 1.5em;
+    margin-left: 1em;
+    padding-top: 0.2em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action {
+    flex-grow: 1;
+    text-align: center;
+    transition: all 0.1s linear;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action:hover {
+    margin-top: -0.1em;
+    font-size: 1.1em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action:hover::after {
+    bottom: 95%;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action:hover.view {
+    color: #0088ce;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action:hover.edit {
+    color: #5e747f;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action:hover.delete {
+    color: #d45269;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.hint--bottom::after {
+    bottom: auto;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.view::before {
+    left: 0.8em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.view::after {
+    left: 1.3em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.edit::before {
+    left: 0.6em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.edit::after {
+    left: 1.25em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.delete::before {
+    left: 0.75em;
+}
+.expando-table .expando-row .popout-ui .row-actions .row-action.delete::after {
+    left: 0.9em;
+}
+.expando-table .expando-view,
+.expando-table .expando-edit {
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.4s linear;
+    z-index: 13;
+    width: 100%;
+    height: 100%;
+    top: 2.3em;
+    left: -200vw;
+    background-color: white;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
+}
+.expando-table .expando-view .expando-row,
+.expando-table .expando-edit .expando-row {
+    padding-bottom: 0.2em;
+    border-bottom-color: black;
+}
+.expando-table .expando-view .expando-row .data-cell,
+.expando-table .expando-edit .expando-row .data-cell {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.expando-table .expando-view .expando-row .close-view,
+.expando-table .expando-view .expando-row .close-edit,
+.expando-table .expando-edit .expando-row .close-view,
+.expando-table .expando-edit .expando-row .close-edit {
+    position: absolute;
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.2em;
+    font-size: 1.1em;
+    border: 0.2em solid black;
+    top: 2.6em;
+    left: 0.3em;
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.8);
+}
+.expando-table .expando-view .expando-row .close-view:hover,
+.expando-table .expando-view .expando-row .close-edit:hover,
+.expando-table .expando-edit .expando-row .close-view:hover,
+.expando-table .expando-edit .expando-row .close-edit:hover {
+    color: black;
+}
+.expando-table .expando-view .expando-row .close-view:hover i,
+.expando-table .expando-view .expando-row .close-edit:hover i,
+.expando-table .expando-edit .expando-row .close-view:hover i,
+.expando-table .expando-edit .expando-row .close-edit:hover i {
+    transform: scale(1.3);
+}
+.expando-table .expando-view .expando-row .open-view,
+.expando-table .expando-view .expando-row .open-edit,
+.expando-table .expando-edit .expando-row .open-view,
+.expando-table .expando-edit .expando-row .open-edit {
+    position: absolute;
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.2em;
+    font-size: 1.1em;
+    border: 0.2em solid black;
+    top: 5.2em;
+    left: 0.3em;
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.8);
+}
+.expando-table .expando-view .expando-row .open-view:hover,
+.expando-table .expando-view .expando-row .open-edit:hover,
+.expando-table .expando-edit .expando-row .open-view:hover,
+.expando-table .expando-edit .expando-row .open-edit:hover {
+    color: black;
+}
+.expando-table .expando-view .expando-row .open-view:hover i,
+.expando-table .expando-view .expando-row .open-edit:hover i,
+.expando-table .expando-edit .expando-row .open-view:hover i,
+.expando-table .expando-edit .expando-row .open-edit:hover i {
+    transform: scale(1.3);
+}
+.expando-table .expando-view .view-content,
+.expando-table .expando-view .edit-content,
+.expando-table .expando-edit .view-content,
+.expando-table .expando-edit .edit-content {
+    line-height: 10em;
+}
+.expando-table .expando-view .view-content p,
+.expando-table .expando-view .edit-content p,
+.expando-table .expando-edit .view-content p,
+.expando-table .expando-edit .edit-content p {
+    text-align: center;
+}
+.expando-table.view-active {
+    overflow: hidden;
+}
+.expando-table.view-active .expando-view {
+    visibility: visible;
+    left: 0;
+}
+.expando-table.edit-active {
+    overflow: hidden;
+}
+.expando-table.edit-active .expando-edit {
+    visibility: visible;
+    left: 0;
+}

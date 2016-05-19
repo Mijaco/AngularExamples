@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>A Pen by  mika</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/hint.css/1.3.6/hint.min.css'>
+
+<div class="app" ng-app="angularPageApp" ng-controller="easyTableCtrl" ng-class="getColorPresetClassName()">
+    <div class="page-banner">An interactive data table solution with Angular</div>
+    <div class="page-banner sub">Fixed headers &#183; Row controls &#183; Inline View & Edit Panels &#183; Color Presets &#183; Help Menu</div>
+    <div ng-click="onClickAway($event)" class="table-container">
+        <easy-color-presets></easy-color-presets>
+        <easy-help-popout></easy-help-popout>
+        <div class="app-container">
+            <easy-table></easy-table>
+        </div>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-sanitize.min.js'></script>
+    
+        <script src="js/index.js"></script>
+
+        <script src="js/controller/easyTableCtrl.js"></script>
+
+        <script src="js/directive/easyColorPresets.js"></script>
+        <script src="js/directive/easyEdit.js"></script>
+        <script src="js/directive/easyHelpPopout.js"></script>
+        <script src="js/directive/easyTable.js"></script>
+        <script src="js/directive/easyView.js"></script>
+
+        <script src="js/filter/renderHTMLCorrectly.js"></script>
+        
+
+    
+    
+    
+  </body>
+</html>

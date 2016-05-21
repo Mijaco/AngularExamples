@@ -1,0 +1,23 @@
+.color-presets .color-preset .color-box {
+    height: 1em;
+    width: 1em;
+}
+
+.color-contenedor {
+    
+    padding: 0.3em 0.1em;
+    transition: transform 0.1s linear;
+    cursor: pointer;
+
+
+    top: 0;
+    left: 5vw;
+    
+}
+.colorCuerpo{
+	background: red;
+}
+
+.colorCabecera{
+	background: green;
+}

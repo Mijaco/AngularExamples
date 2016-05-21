@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Controladores</title>
+    
+        <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+  <body>
+
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/hint.css/1.3.6/hint.min.css'>
+
+<div class="app" ng-app="angularPageApp" >
+  
+
+<div ng-controller="cittaController"> 
+    <p>Città: <input type="text" ng-model="nome"/></p> 
+    <p>Regione: <input type="text" ng-model="regione"/></p> 
+    <p><button ng-click="aggiungiCitta()">Aggiungi</button></p> 
+</div>
+
+<div ng-controller="elencoController"> 
+    <ul> 
+        <li ng-repeat="citta in elencoCitta">{{citta.nome}}</li> 
+    </ul> 
+</div>
+
+
+<!--style="width: {{contenedor.estilo.width}}; float: left;" -->
+<div ng-controller="containerController">
+    <div ng-repeat="contenedor in contenedores" style="width: {{contenedor.estilo.width}}; float: left;">
+            <div ng-class="{colorCuerpo: true}" style="background-color:{{getBackgroundColor(contenedor)}}">{{getBackgroundColor(contenedor)}}
+    </div>
+
+
+</div>
+
+<color-picker></color-picker>
+
+
+
+
+
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-sanitize.min.js'></script>
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="js/index.js"></script>
+
+  </body>
+</html>

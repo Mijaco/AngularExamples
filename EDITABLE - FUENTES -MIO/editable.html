@@ -1,0 +1,40 @@
+<html ng-app="app" class="ng-scope"><head>
+    <meta charset="utf-8">
+    <title>Angular-xeditable Starter Template</title>
+    <!-- Bootstrap 3 css -->
+    <!-- Angular.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- Angular-xeditable -->
+    <link href="css/xeditable.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/xeditable.js"></script>
+    <!-- app.js -->
+    <script src="js/app.js"></script>
+ </head>
+<style>
+div[ng-app] { margin: 5px; }
+div[ng-controller="Ctrl"] > div {
+   height: 35px;
+}
+div[ng-controller="Ctrl"] > div > * {
+   vertical-align: top;
+}
+</style>
+  <h4>Angular-xeditable Text (Bootstrap 3)</h4>
+<div ng-app="app" ng-controller="Ctrl">
+  <div>Email: <a href="#" editable-email="user.email">{{ user.email || 'empty' }}</a></div>
+  <div>Tel: <a href="#" editable-tel="user.tel" e-pattern="\d{3}\-\d{2}\-\d{2}" e-title="xxx-xx-xx">{{ user.tel || 'empty' }}</a></div>
+  <div>Number: <a href="#" editable-number="user.number" e-min="18">{{ user.number || 'empty' }}</a></div>  
+  <div>Range: <a href="#" editable-range="user.range" e-step="5">{{ user.range || 'empty' }}</a></div>  
+  <div>Url: <a href="#" editable-url="user.url">{{ user.url || 'empty' }}</a></div>  
+  <div>Search: <a href="#" editable-search="user.search">{{ user.search || 'empty' }}</a></div>  
+  <div>Color: <a href="#" editable-color="user.color">{{ user.color || 'empty' }}</a></div>  
+  <div>Date: <a href="#" editable-date="user.date">{{ user.date || 'empty' }}</a></div>  
+  <div>Time: <a href="#" editable-time="user.time">{{ user.time || 'empty' }}</a></div>  
+  <div>Datetime: <a href="#" editable-datetime="user.datetime">{{ user.datetime || 'empty' }}</a></div>  
+  <div>Month: <a href="#" editable-month="user.month">{{ user.month || 'empty' }}</a></div>  
+  <div>Week: <a href="#" editable-week="user.week">{{ user.week || 'empty' }}</a></div>  
+</div>
+
+
+  </html>

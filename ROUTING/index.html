@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular Route Animation slide-up</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <section ng-app="app">
+  <ul class="menu" ng-controller="menu">
+    <li ng-repeat="page in pages" ng-class="{'active' : page == currentPage()}" ng-click="changePage(page)">{{page}}</li>
+  </ul>
+  <ui-view></ui-view>
+</section>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-animate.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

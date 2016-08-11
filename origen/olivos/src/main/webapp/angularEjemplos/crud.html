@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="taskManagerApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>AngularJS  - Administrador de Tareas</title>
+<link href='./css/style.css' rel="stylesheet" type="text/css"></link>
+<link href='./css/css/font-awesome.css' rel="stylesheet" type="text/css"></link>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<script data-require="angular.js@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+  <script data-require="angular-animate@*" data-semver="1.2.13" src="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
+
+
+<script> 
+$(function(){
+  $("#header").load("header.html"); 
+//   $("#footer").load("footer.html"); 
+});
+</script>
+</head>
+<body>
+
+<div ng-controller="taskManagerController">
+<h2 class="page-title">Administrador de Tareas: Maven,  AngularJS  y Rest con Spring MVC 4  </h2>
+
+	<div id="task-panel" class="fadein fadeout showpanel panel"  ng-show="toggle">	
+		<div class="panel-heading">
+			<i class="panel-title-icon fa fa-tasks"></i>
+			<span class="panel-title">Tareas Recientes</span>
+			<div class="panel-heading-controls">
+				<button ng-click="toggle = !toggle" class="btn-panel">Agregar Tarea Nueva</button>
+				<button class="btn-panel" confirmed-click="archiveTasks()" ng-confirm-click="¿Quieres limpiar todas las tareas completadas?">Limpiar todas las tareas completadas</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="task" ng-repeat="task in tasks">
+				<span ng-if="task.taskPriority=='HIGH'" class="priority priority-red">
+					{{task.taskPriority}}
+				</span>
+				<span ng-if="task.taskPriority=='MEDIUM'" class="priority priority-yellow">
+					{{task.taskPriority}}
+				</span>
+				<span ng-if="task.taskPriority=='LOW'" class="priority priority-green">
+					{{task.taskPriority}}
+				</span>
+				<div class="action-checkbox">
+					<input id="{{task.taskId}}" type="checkbox" value="{{task.taskId}}" ng-checked="selection.indexOf(task.taskId) > -1" ng-click="toggleSelection(task.taskId)" />
+	  				<label for="{{task.taskId}}"></label>		
+				</div>
+				<div ng-if="task.taskStatus=='COMPLETED'">				
+					<a href="#" class="checkedClass">
+						{{task.taskName}}
+					<span class="action-status">{{task.taskStatus}}</span>
+					</a>
+				</div>
+				<div ng-if="task.taskStatus=='ACTIVE'">				
+					<a href="#" class="uncheckedClass">
+						{{task.taskName}}
+						<span class="action-status">{{task.taskStatus}}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="add-task-panel" class="fadein fadeout addpanel panel" ng-hide="toggle">
+		<div class="panel-heading">
+			<i class="panel-title-icon fa fa-plus"></i>
+			<span class="panel-title">Agregar Tarea</span>
+			<div class="panel-heading-controls">
+				<button ng-click="toggle = !toggle" class="btn-panel">Mostrar Todas Las Tareas</button>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="task" >
+				<table class="add-task">
+					<tr>
+						<td>Nombre:</td>
+						<td><input type="text" ng-model="taskName"/></td>
+					</tr>
+					<tr>
+						<td>Descripción:</td>
+						<td><input type="text" ng-model="taskDesc"/></td>
+					</tr>
+					<tr>
+						<td>Estado:</td>
+						<td>
+							<select ng-model="taskStatus" ng-options="status as status for status in statuses">
+								<option value="">-- Seleccione --</option>						
+						     	</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Prioridad:</td>
+						<td>
+							<select ng-model="taskPriority" ng-options="priority as priority for priority in priorities">
+								<option value="">-- Seleccione --</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><br/><button ng-click="addTask()" class="btn-panel-big">Agregar Tarea Nueva</button></td>
+					</tr>
+				</table>								
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

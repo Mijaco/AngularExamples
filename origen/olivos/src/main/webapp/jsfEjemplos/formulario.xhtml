@@ -1,0 +1,127 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"	
+	xmlns:p="http://primefaces.org/ui"
+	>
+	<h:head>
+		<link type="text/css" rel="stylesheet" href="/project/faces/javax.faces.resource/theme.css?ln=primefaces-glass-x" />
+	</h:head>
+	<f:metadata>
+    <f:event listener="#{paquete_turistico.inicio}" type="preRenderView" />
+</f:metadata>
+	<script type="text/javascript">
+	function refresh(){
+		location.reload(true);
+	}
+	function saludo(){
+		alert("Se registró el proveedor correctamente");
+	}
+	</script>
+	
+<h:body >
+
+
+
+
+	 <p:tabView >
+        <p:tab title="GENERAR PAQUETE TURÍSTICO">
+        
+        	<center>
+	<h2>GENERAR PAQUETE TURÍSTICO</h2>	
+	
+  	<h:panelGrid columns="2" cellpadding="5">
+
+	
+  	  
+	  <p:outputLabel value="Id proveedor:" />
+  	   <p:selectOneMenu value="#{paquete_turistico.id_proveedor}" style="width:200px">
+            <f:selectItem itemLabel="--Seleccione Proveedor--" itemValue="" />
+            <f:selectItems value="#{paquete_turistico.listaProvs}" />
+        </p:selectOneMenu>
+  	  
+  	   <p:outputLabel value="Alojamiento:  " />
+  	   <p:selectOneMenu id="console" value="#{paquete_turistico.alojamiento}" style="width:200px">
+			<f:selectItem itemLabel="--Seleccione Alojamiento--" itemValue="Ninguno" />
+            <f:selectItem itemLabel="Hotel Imperio (Cuzco)" itemValue="Hotel Imperio" />
+            <f:selectItem itemLabel="Hotel Santo (Cajamarca)" itemValue="Hotel Santo" />
+            <f:selectItem itemLabel="Hotel Sol (Huánuco)" itemValue="Hotel Sol" />
+            <f:selectItem itemLabel="Hotel Carrión (Trujillo)" itemValue="Hotel Carrión" />
+        </p:selectOneMenu>
+  	  
+  	    <p:outputLabel value="Habitación: " />
+  	  <p:inputText value="#{paquete_turistico.habitacion}" style="width: 200px; height: 28px"/>
+  	  
+  	    <p:outputLabel value="Costo: " />
+  	  <p:inputText value="#{paquete_turistico.costo}" style="width: 200px; height: 28px"/>
+  	  
+  	    <p:outputLabel value="Fecha Salida:" />
+  	  <p:calendar  id="button" value="#{paquete_turistico.date_s}" showOn="button" style="witdh:220px;" timeOnly="false"/>
+  	
+  	<p:outputLabel value="Fecha retorno: 	" />
+   <p:calendar id="buttonR" value="#{paquete_turistico.date_f}" showOn="button" />
+ 
+  	</h:panelGrid>
+  	
+  	<p:commandButton value="Generar Paquete"  action="#{paquete_turistico.agregarRegistro()}" icon="ui-icon-check" />
+  	
+
+  
+
+</center>	
+           
+           
+        </p:tab>
+        
+        
+        <p:tab title="Agregar Proveedor" >
+        
+                  	<center>
+	<h2>AGREGAR PROVEEDORes</h2>	
+	 <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" />
+	 <p:inputText value="#{paquete_turistico.conexion}"></p:inputText>
+	 
+  	<h:panelGrid columns="2" cellpadding="5">
+
+	
+  	  
+  	  
+  	    <p:outputLabel value="Dni " />
+  	  <p:inputText value="#{paquete_turistico.dni}" style="width: 220px; height: 28px" placeholder="Máximo 9 Carac."/>
+  	  
+  	    <p:outputLabel value="Nombre : " />
+  	  <p:inputText style="width: 220px; height: 28px" placeholder=" Nombres Completos"/>
+  	  
+  	    <p:outputLabel value="Apellidos :" />
+<p:inputText style="width: 220px; height: 28px" placeholder="Paterno y Materno"/>
+  	
+  	
+  	    <p:outputLabel value="Dirección :" />
+<p:inputText style="width: 220px; height: 28px" placeholder="Ciudad- Número"/>
+
+  	    <p:outputLabel value="Teléfono :" />
+ <p:inputMask id="phone" mask="(99) 999-9999"/>
+
+  	    <p:outputLabel value="Email :" />
+<p:inputText style="width: 220px; height: 28px" placeholder="@Email"/>
+  	
+  	</h:panelGrid>
+  	
+  	<p:commandButton value="Registrar Proveedor"  action="#{paquete_turistico.agregarId}" oncomplete="saludo()" icon="ui-icon-check" />
+  	
+  
+  <p:commandButton value="Probar Conectividad" actionListener="#{paquete_turistico.probarConexion}" />
+
+
+</center>
+        </p:tab>
+      
+    </p:tabView>
+	
+	
+
+	
+</h:body>
+</ui:composition>		
+
+

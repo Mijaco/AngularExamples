@@ -1,0 +1,108 @@
+
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+#header {
+		height: 130px;
+		border-bottom: 1px solid #403F44;
+	}
+		.header_logotype_container {
+			width: 260px;
+			height: 130px;
+			border-right: 1px solid #403F44;
+			float: left;
+		}
+
+
+.header_menu_container {
+			height: 130px;
+			width: 699px;
+			float: left;
+		}
+.header_menu_container a {
+				font-family: 'Lato', Helvetica, sans-serif;
+			}
+			
+			.clear {
+	clear: both;
+}
+			
+.horizontal_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal_list li {
+		float: left;
+	}
+	.horizontal_list li:before {
+		content: none;
+	}
+	.horizontal_list li { 
+		padding-left: 0; 
+		text-indent: 0;
+	}
+	
+	.header_menu a.no_border{
+		border-left: none;
+	}
+	
+	.purple {
+	color: #837c9a;
+	}
+	
+	.contact_details_content h2 + p.purple{
+	margin-top: 10px;
+}
+
+.contact_details_content p.purple{
+	margin-top: 25px;
+}
+	
+	
+	/* TAGS PRINCIPALES*/
+	
+	body {
+	background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_wall.png) repeat;
+	margin: 0;
+}
+
+
+blockquote, p , a, li {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: #e4e3e8;
+}
+
+a:focus { 
+    outline: none;
+}
+	
+	a:focus { 
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+	li { 
+		padding-left: 1em; 
+		text-indent: -.7em;
+	}
+	li:before {
+		content: "• ";
+		color: #837c9a;
+		font-size: 20px;
+		padding-right: 8px;
+	}
+			
